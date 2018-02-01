@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _10_19_2017thursday
+namespace 19-10-2017
 {
     class Program
     {
