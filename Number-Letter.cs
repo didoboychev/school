@@ -1,5 +1,5 @@
 using System;
-namespace Exercise1A
+namespace упражнение1
 {
     class Program
     {
