@@ -3,27 +3,31 @@ namespace GuessTheNumber
 {
     class Program
     {
-        static void Main(string[] args)
-        {
-            var r = new Random();
-            int rand = r.Next(1, 101);
-            Console.Write("Enter a number: ");
-            string guessString = Console.ReadLine();
-            int guess = int.Parse(guessString);
-            int attempt = 1;
+     Random random = new Random();
 
-            do
+int returnValue = random.Next(1, 100);
+
+        int Guess = 0;
+
+        Console.WriteLine("Мисля че числото е между 1-100.  Можеш ли да познаеш ?");
+
+        while (Guess != returnValue)
+        {
+            Guess = Convert.ToInt32(Console.Read());
+
+            if (Guess < returnValue)
             {
-                if (rand > guess)
-                    Console.WriteLine("Upwards");
-                else
-                    Console.WriteLine("Downwards");
-                attempt++;
-                guess = int.Parse(Console.ReadLine());
+                Console.WriteLine("Не, числото е по голямо от : " + Guess + ". Can you guess what it is?");
             }
-            while (!(rand == guess));
-            Console.WriteLine("Correct.You've made {0} attempts.",attempt);
-            Console.ReadLine();
+            else if (Guess > returnValue)
+            {
+                Console.WriteLine("Не, числото е по малко  " + Guess + ". Can you guess what it is?");
+            }
+
+        }
+
+        Console.WriteLine("Браво! Ти позна! " + returnValue);
+        Console.ReadLine();
         }
     }
 }
