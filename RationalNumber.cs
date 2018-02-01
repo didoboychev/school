@@ -1,5 +1,5 @@
 using System;
-namespace Homework
+namespace за домашно
 {
     class Program
     {
